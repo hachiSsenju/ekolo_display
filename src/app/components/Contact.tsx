@@ -1,8 +1,10 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
 import { Mail, Send, Twitter, Linkedin, Github, CheckCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export function Contact() {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const inView = useInView(ref, { once: false, amount: 0.2 });
   const [sent, setSent] = useState(false);
@@ -43,16 +45,16 @@ export function Contact() {
             className="inline-block px-4 py-1.5 rounded-full text-sm text-[#1FAF5A] mb-4"
             style={{ background: "rgba(31,175,90,0.1)", border: "1px solid rgba(31,175,90,0.2)" }}
           >
-            Contact
+            {t("contact.badge")}
           </span>
           <h2
             className="text-white mb-4"
             style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 800 }}
           >
-            Rejoignez le mouvement EKOLO
+            {t("contact.title")}
           </h2>
           <p className="text-white/50 max-w-2xl mx-auto" style={{ lineHeight: 1.7 }}>
-            Partenaire, investisseur, municipalité ou simple curieux — contactez-nous pour en savoir plus ou rejoindre l'aventure.
+            {t("contact.subtitle")}
           </p>
         </motion.div>
 
@@ -80,7 +82,7 @@ export function Contact() {
                 </div>
                 <div>
                   <div className="text-white text-sm" style={{ fontWeight: 600 }}>
-                    Email officiel
+                    {t("contact.info.email_title")}
                   </div>
                   <a
                     href="mailto:maylem@outlook.fr"
@@ -91,7 +93,7 @@ export function Contact() {
                 </div>
               </div>
               <p className="text-white/40 text-sm" style={{ lineHeight: 1.6 }}>
-                Notre équipe répond sous 24h ouvrées. Pour les partenariats institutionnels, précisez votre organisation.
+                {t("contact.info.email_desc")}
               </p>
             </div>
 
@@ -103,7 +105,7 @@ export function Contact() {
               }}
             >
               <h3 className="text-white mb-4 text-sm" style={{ fontWeight: 600 }}>
-                Suivez-nous
+                {t("contact.info.follow")}
               </h3>
               <div className="flex gap-4">
                 {[
@@ -135,17 +137,17 @@ export function Contact() {
               }}
             >
               <div className="text-[#1FAF5A] mb-2" style={{ fontWeight: 700, fontSize: "1.1rem" }}>
-                Appel à partenaires
+                {t("contact.info.call_title")}
               </div>
               <p className="text-white/50 text-sm" style={{ lineHeight: 1.6 }}>
-                Nous recherchons des municipalités pilotes et des ONG pour notre prochaine phase de déploiement. Rejoignez notre programme beta.
+                {t("contact.info.call_desc")}
               </p>
               <div
                 className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm"
                 style={{ background: "rgba(31,175,90,0.15)", color: "#1FAF5A" }}
               >
                 <div className="w-2 h-2 rounded-full bg-[#1FAF5A] animate-pulse" />
-                Candidatures ouvertes
+                {t("contact.info.call_badge")}
               </div>
             </div>
           </motion.div>
@@ -174,27 +176,27 @@ export function Contact() {
                     <CheckCircle className="w-16 h-16 text-[#1FAF5A] mx-auto mb-4" />
                   </motion.div>
                   <h3 className="text-white mb-2" style={{ fontWeight: 700, fontSize: "1.2rem" }}>
-                    Message envoyé !
+                    {t("contact.form.success.title")}
                   </h3>
                   <p className="text-white/40 text-sm">
-                    Notre équipe vous répondra dans les 24 heures.
+                    {t("contact.form.success.desc")}
                   </p>
                   <button
                     onClick={() => setSent(false)}
                     className="mt-6 text-[#1FAF5A] text-sm hover:underline"
                   >
-                    Envoyer un autre message
+                    {t("contact.form.success.another")}
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <h3 className="text-white mb-6" style={{ fontWeight: 600, fontSize: "1.1rem" }}>
-                    Envoyez-nous un message
+                    {t("contact.form.title")}
                   </h3>
                   {[
-                    { key: "name", label: "Nom complet", type: "text", placeholder: "Amara Diallo" },
-                    { key: "email", label: "Email", type: "email", placeholder: "amara@exemple.com" },
-                    { key: "org", label: "Organisation", type: "text", placeholder: "Mairie de Dakar / ONG / Entreprise" },
+                    { key: "name", label: t("contact.form.fields.name.label"), type: "text", placeholder: t("contact.form.fields.name.placeholder") },
+                    { key: "email", label: t("contact.form.fields.email.label"), type: "email", placeholder: t("contact.form.fields.email.placeholder") },
+                    { key: "org", label: t("contact.form.fields.org.label"), type: "text", placeholder: t("contact.form.fields.org.placeholder") },
                   ].map(({ key, label, type, placeholder }) => (
                     <div key={key}>
                       <label className="block text-white/60 text-sm mb-2">{label}</label>
@@ -221,10 +223,10 @@ export function Contact() {
                     </div>
                   ))}
                   <div>
-                    <label className="block text-white/60 text-sm mb-2">Message</label>
+                    <label className="block text-white/60 text-sm mb-2">{t("contact.form.fields.message.label")}</label>
                     <textarea
                       rows={4}
-                      placeholder="Décrivez votre projet ou votre demande..."
+                      placeholder={t("contact.form.fields.message.placeholder")}
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl text-white placeholder-white/25 outline-none transition-all duration-200 resize-none"
@@ -252,7 +254,7 @@ export function Contact() {
                     }}
                   >
                     <Send className="w-4 h-4" />
-                    Envoyer le message
+                    {t("contact.form.submit")}
                   </button>
                 </form>
               )}

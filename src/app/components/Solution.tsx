@@ -1,42 +1,44 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Camera, Brain, BarChart2, Zap } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const MOBILE_IMG = "https://images.unsplash.com/photo-1739269552506-377309b10c7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwd29tYW4lMjBzbWFydHBob25lJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzIwNTYwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080";
 const ANALYTICS_IMG = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwdmlzdWFsaXphdGlvbiUyMGFuYWx5dGljcyUyMHNjcmVlbiUyMG1vbml0b3J8ZW58MXx8fHwxNzcyMDQ2OTY5fDA&ixlib=rb-4.1.0&q=80&w=1080";
 
-const steps = [
-  {
-    icon: Camera,
-    number: "01",
-    title: "Signalement photo/vidéo",
-    desc: "Les citoyens signalent en temps réel via l'app mobile multilingue avec géolocalisation automatique. L'IA intégrée facilite le signalement et identifie automatiquement le type de déchet. Système de récompenses et campagnes écologiques pour motiver la participation.",
-    color: "#1FAF5A",
-  },
-  {
-    icon: Brain,
-    number: "02",
-    title: "Analyse par IA",
-    desc: "Notre moteur d'intelligence artificielle classe, identifie le type de déchet avec précision, évalue la fiabilité de chaque signalement et priorise les interventions en millisecondes pour une réponse optimale.",
-    color: "#3dd9eb",
-  },
-  {
-    icon: BarChart2,
-    number: "03",
-    title: "Dashboard stratégique multilingue",
-    desc: "Les autorités visualisent en temps réel la carte des incidents, les tendances et les zones prioritaires. L'IA fournit des analyses précises sur les types de déchets et la fiabilité des signalements. Interface disponible dans toutes les langues locales.",
-    color: "#a78bfa",
-  },
-  {
-    icon: Zap,
-    number: "04",
-    title: "Intervention rapide",
-    desc: "Les équipes terrain reçoivent des missions automatisées et optimisées avec toutes les informations détaillées (type de déchet, fiabilité, priorité), réduisant drastiquement les délais d'intervention.",
-    color: "#f7c59f",
-  },
-];
-
 export function Solution() {
+  const { t } = useTranslation();
+
+  const steps = [
+    {
+      icon: Camera,
+      number: "01",
+      title: t("solution.steps.0.title"),
+      desc: t("solution.steps.0.desc"),
+      color: "#1FAF5A",
+    },
+    {
+      icon: Brain,
+      number: "02",
+      title: t("solution.steps.1.title"),
+      desc: t("solution.steps.1.desc"),
+      color: "#3dd9eb",
+    },
+    {
+      icon: BarChart2,
+      number: "03",
+      title: t("solution.steps.2.title"),
+      desc: t("solution.steps.2.desc"),
+      color: "#a78bfa",
+    },
+    {
+      icon: Zap,
+      number: "04",
+      title: t("solution.steps.3.title"),
+      desc: t("solution.steps.3.desc"),
+      color: "#f7c59f",
+    },
+  ];
   const ref = useRef(null);
   const inView = useInView(ref, { once: false, amount: 0.2 });
 
@@ -67,16 +69,16 @@ export function Solution() {
             className="inline-block px-4 py-1.5 rounded-full text-sm text-[#1FAF5A] mb-4"
             style={{ background: "rgba(31,175,90,0.1)", border: "1px solid rgba(31,175,90,0.2)" }}
           >
-            Notre solution
+            {t("solution.badge")}
           </span>
           <h2
             className="text-white mb-4"
             style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 800 }}
           >
-            Comment ça marche
+            {t("solution.title")}
           </h2>
           <p className="text-white/50 max-w-2xl mx-auto" style={{ lineHeight: 1.7 }}>
-            EKOLO simplifie la chaîne de traitement environnemental en 4 étapes claires, du signalement à l'intervention.
+            {t("solution.subtitle")}
           </p>
         </motion.div>
 
@@ -153,8 +155,8 @@ export function Solution() {
           className="mt-28 grid lg:grid-cols-2 gap-8"
         >
           {[
-            { img: MOBILE_IMG, label: "App Mobile", sub: "IA • Récompenses • Multilingue" },
-            { img: ANALYTICS_IMG, label: "Dashboard IA", sub: "Fiabilité • Types de déchets • Multilingue" },
+            { img: MOBILE_IMG, label: t("solution.bottom_cards.mobile.title"), sub: t("solution.bottom_cards.mobile.desc") },
+            { img: ANALYTICS_IMG, label: t("solution.bottom_cards.analytics.title"), sub: t("solution.bottom_cards.analytics.desc") },
           ].map((item) => (
             <div
               key={item.label}

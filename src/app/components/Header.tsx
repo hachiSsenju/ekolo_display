@@ -1,20 +1,26 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import logo from "../../assets/images/logo.png";
 import { motion, AnimatePresence } from "motion/react";
-
-const navLinks = [
-  { label: "Accueil", href: "#accueil" },
-  { label: "À propos", href: "#apropos" },
-  { label: "Solution", href: "#solution" },
-  { label: "Impact", href: "#impact" },
-  { label: "Prototypes", href: "#prototypes" },
-  { label: "Contact", href: "#contact" },
-];
+import { useTranslation } from "react-i18next";
 
 export function Header() {
+  const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  const navLinks = [
+    { label: t("header.nav.home"), href: "#accueil" },
+    { label: t("header.nav.about"), href: "#apropos" },
+    { label: t("header.nav.solution"), href: "#solution" },
+    { label: t("header.nav.impact"), href: "#impact" },
+    { label: t("header.nav.prototypes"), href: "#prototypes" },
+    { label: t("header.nav.contact"), href: "#contact" },
+  ];
+
+  const handleLanguageToggle = () => {
+    i18n.changeLanguage(i18n.language.startsWith('fr') ? 'en' : 'fr');
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -66,24 +72,39 @@ export function Header() {
         </nav>
 
         {/* CTA */}
-        <button
-          onClick={() => handleNav("#prototypes")}
-          className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full text-sm text-white transition-all duration-300 hover:scale-105"
-          style={{
-            background: "linear-gradient(135deg, #1FAF5A 0%, #0d7a3e 100%)",
-            boxShadow: "0 0 20px rgba(31,175,90,0.35)",
-          }}
-        >
-          Voir les prototypes
-        </button>
+        <div className="hidden md:flex items-center gap-4">
+          <button
+            onClick={handleLanguageToggle}
+            className="flex items-center gap-1 text-white/70 hover:text-white transition-colors text-sm uppercase font-semibold tracking-wider"
+          >
+            <Globe className="w-4 h-4" />
+            {(i18n.language || "fr").substring(0, 2)}
+          </button>
+          <button
+            onClick={() => handleNav("#prototypes")}
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm text-white transition-all duration-300 hover:scale-105"
+            style={{
+              background: "linear-gradient(135deg, #1FAF5A 0%, #0d7a3e 100%)",
+              boxShadow: "0 0 20px rgba(31,175,90,0.35)",
+            }}
+          >
+            {t("header.cta_prototypes")}
+          </button>
+        </div>
 
         {/* Mobile toggle */}
-        <button
-          className="md:hidden text-white"
-          onClick={() => setMobileOpen(!mobileOpen)}
-        >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        <div className="md:hidden flex items-center gap-4 text-white">
+          <button
+            onClick={handleLanguageToggle}
+            className="text-white/70 hover:text-white transition-colors text-sm flex items-center gap-1 uppercase font-semibold"
+          >
+            <Globe className="w-4 h-4" />
+            {(i18n.language || "fr").substring(0, 2)}
+          </button>
+          <button onClick={() => setMobileOpen(!mobileOpen)}>
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -114,7 +135,7 @@ export function Header() {
                   background: "linear-gradient(135deg, #1FAF5A 0%, #0d7a3e 100%)",
                 }}
               >
-                Voir les prototypes
+                {t("header.cta_prototypes")}
               </button>
             </div>
           </motion.div>

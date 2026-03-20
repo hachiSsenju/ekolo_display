@@ -1,37 +1,39 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Target, Users, Leaf, Zap } from "lucide-react";
-
-const impacts = [
-  {
-    icon: Target,
-    title: "Signalement citoyen intelligent",
-    description: "App mobile multilingue avec IA intégrée pour identifier automatiquement le type de déchet. Système de récompenses et campagnes écologiques pour maximiser la participation citoyenne.",
-    color: "#1FAF5A",
-  },
-  {
-    icon: Users,
-    title: "Engagement communautaire",
-    description: "Mobilisation des communautés grâce aux langues locales africaines, campagnes écologiques ciblées et système de récompenses motivant pour un environnement urbain plus propre.",
-    color: "#3dd9eb",
-  },
-  {
-    icon: Leaf,
-    title: "Intervention précise",
-    description: "Dashboard multilingue avec IA qui évalue la fiabilité des signalements et identifie le type exact de déchet, permettant une coordination optimale des équipes terrain.",
-    color: "#a78bfa",
-  },
-  {
-    icon: Zap,
-    title: "Analyse prédictive IA",
-    description: "Intelligence artificielle qui classe les signalements, évalue leur fiabilité, identifie les types de déchets et prédit les zones à risque pour optimiser les ressources municipales.",
-    color: "#f7c59f",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export function Impact() {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const inView = useInView(ref, { once: false, amount: 0.2 });
+
+  const impacts = [
+    {
+      icon: Target,
+      title: t("impact.cards.0.title"),
+      description: t("impact.cards.0.description"),
+      color: "#1FAF5A",
+    },
+    {
+      icon: Users,
+      title: t("impact.cards.1.title"),
+      description: t("impact.cards.1.description"),
+      color: "#3dd9eb",
+    },
+    {
+      icon: Leaf,
+      title: t("impact.cards.2.title"),
+      description: t("impact.cards.2.description"),
+      color: "#a78bfa",
+    },
+    {
+      icon: Zap,
+      title: t("impact.cards.3.title"),
+      description: t("impact.cards.3.description"),
+      color: "#f7c59f",
+    },
+  ];
 
   return (
     <section
@@ -67,16 +69,16 @@ export function Impact() {
             className="inline-block px-4 py-1.5 rounded-full text-sm text-[#1FAF5A] mb-4"
             style={{ background: "rgba(31,175,90,0.1)", border: "1px solid rgba(31,175,90,0.2)" }}
           >
-            Notre vision
+            {t("impact.badge")}
           </span>
           <h2
             className="text-white mb-4"
             style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 800 }}
           >
-            Un écosystème intelligent pour l'Afrique
+            {t("impact.title")}
           </h2>
           <p className="text-white/50 max-w-2xl mx-auto" style={{ lineHeight: 1.7 }}>
-            EKOLO vise à créer un pont entre citoyens, autorités et technologie pour des villes africaines plus durables.
+            {t("impact.subtitle")}
           </p>
         </motion.div>
 
@@ -139,12 +141,10 @@ export function Impact() {
           }}
         >
           <h3 className="text-white mb-4" style={{ fontWeight: 700, fontSize: "1.3rem" }}>
-            Une solution pensée pour l'Afrique
+            {t("impact.vision_title")}
           </h3>
           <p className="text-white/60 max-w-3xl mx-auto" style={{ lineHeight: 1.8, fontSize: "1.05rem" }}>
-            EKOLO adapte les dernières technologies d'IA et de data analytics aux réalités des villes africaines. 
-            Notre plateforme facilite le signalement, accélère les interventions et crée un cercle vertueux 
-            d'amélioration continue pour un environnement urbain plus sain.
+            {t("impact.vision_desc")}
           </p>
         </motion.div>
       </div>

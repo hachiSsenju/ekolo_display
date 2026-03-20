@@ -1,36 +1,38 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Smartphone, LayoutDashboard, ArrowUpRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const MOBILE_IMG = "https://images.unsplash.com/photo-1739269552506-377309b10c7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwd29tYW4lMjBzbWFydHBob25lJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzIwNTYwNDB8MA&ixlib=rb-4.1.0&q=80&w=1080";
 const ANALYTICS_IMG = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwdmlzdWFsaXphdGlvbiUyMGFuYWx5dGljcyUyMHNjcmVlbiUyMG1vbml0b3J8ZW58MXx8fHwxNzcyMDQ2OTY5fDA&ixlib=rb-4.1.0&q=80&w=1080";
 
-const prototypes = [
-  {
-    icon: Smartphone,
-    tag: "App Mobile",
-    title: "EKOLO Citizen App",
-    desc: "App multilingue avec IA intégrée pour faciliter le signalement : identification automatique du type de déchet, géolocalisation, photo. Système de récompenses et campagnes écologiques pour motiver les citoyens. Disponible dans toutes les langues locales africaines.",
-    img: MOBILE_IMG,
-    color: "#1FAF5A",
-    badge: "iOS & Android",
-    href: "https://mobil.figma.site",
-  },
-  {
-    icon: LayoutDashboard,
-    tag: "Dashboard Admin",
-    title: "Centre de Commande Municipal",
-    desc: "Interface multilingue de vue globale avec analyse IA : précision sur le type de déchet, évaluation de la fiabilité des signalements, gestion des équipes terrain et rapports analytiques avancés. Adaptée à toutes les langues locales.",
-    img: ANALYTICS_IMG,
-    color: "#a78bfa",
-    badge: "Web App",
-    href: "https://admindashboards.figma.site/",
-  },
-];
-
 export function Prototypes() {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const inView = useInView(ref, { once: false, amount: 0.2 });
+
+  const prototypes = [
+    {
+      icon: Smartphone,
+      tag: t("prototypes.cards.0.tag"),
+      title: t("prototypes.cards.0.title"),
+      desc: t("prototypes.cards.0.desc"),
+      img: MOBILE_IMG,
+      color: "#1FAF5A",
+      badge: t("prototypes.cards.0.badge"),
+      href: "https://mobil.figma.site",
+    },
+    {
+      icon: LayoutDashboard,
+      tag: t("prototypes.cards.1.tag"),
+      title: t("prototypes.cards.1.title"),
+      desc: t("prototypes.cards.1.desc"),
+      img: ANALYTICS_IMG,
+      color: "#a78bfa",
+      badge: t("prototypes.cards.1.badge"),
+      href: "https://admindashboards.figma.site/",
+    },
+  ];
 
   return (
     <section
@@ -57,16 +59,16 @@ export function Prototypes() {
             className="inline-block px-4 py-1.5 rounded-full text-sm text-[#1FAF5A] mb-4"
             style={{ background: "rgba(31,175,90,0.1)", border: "1px solid rgba(31,175,90,0.2)" }}
           >
-            Nos prototypes
+            {t("prototypes.badge")}
           </span>
           <h2
             className="text-white mb-4"
             style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 800 }}
           >
-            Explorez l'écosystème EKOLO
+            {t("prototypes.title")}
           </h2>
           <p className="text-white/50 max-w-2xl mx-auto" style={{ lineHeight: 1.7 }}>
-            Accédez aux différentes interfaces et prototypes fonctionnels de la plateforme.
+            {t("prototypes.subtitle")}
           </p>
           <div 
             className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm"
@@ -80,7 +82,7 @@ export function Prototypes() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1FAF5A] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#1FAF5A]"></span>
             </span>
-            Prototypes interactifs - Cliquez pour tester
+            {t("prototypes.interactive")}
           </div>
         </motion.div>
 
@@ -93,7 +95,7 @@ export function Prototypes() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.1 + i * 0.15 }}
             >
-              <PrototypeCard proto={p} />
+              <PrototypeCard proto={p} t={t} />
             </motion.div>
           ))}
         </div>
@@ -104,8 +106,10 @@ export function Prototypes() {
 
 function PrototypeCard({
   proto,
+  t,
 }: {
-  proto: (typeof prototypes)[0];
+  proto: any;
+  t: any;
 }) {
   const Icon = proto.icon;
 
@@ -192,7 +196,7 @@ function PrototypeCard({
             color: proto.color,
           }}
         >
-          Voir le prototype
+          {t("prototypes.cta")}
           <ArrowUpRight className="w-4 h-4" />
         </a>
       </div>

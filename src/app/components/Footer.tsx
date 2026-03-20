@@ -1,17 +1,20 @@
 import { Leaf, Mail, Twitter, Linkedin, Github, ArrowUpRight } from "lucide-react";
-
-const navGroups = [
-  {
-    title: "Plateforme",
-    links: ["Accueil", "À propos", "Comment ça marche", "Impact"],
-  },
-  {
-    title: "Prototypes",
-    links: ["App Mobile", "Dashboard Admin"],
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export function Footer() {
+  const { t } = useTranslation();
+
+  const navGroups = [
+    {
+      title: t("footer.platforms.title"),
+      links: [t("footer.platforms.home"), t("footer.platforms.about"), t("footer.platforms.how_it_works"), t("footer.platforms.impact")],
+    },
+    {
+      title: t("footer.prototypes.title"),
+      links: [t("footer.prototypes.mobile"), t("footer.prototypes.admin")],
+    },
+  ];
+
   const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
@@ -44,7 +47,7 @@ export function Footer() {
               </span>
             </button>
             <p className="text-white/35 text-sm mb-6" style={{ lineHeight: 1.7 }}>
-              L'intelligence collective au service d'un monde plus propre. Signalement, analyse IA, intervention rapide.
+              {t("footer.description")}
             </p>
             <div className="flex gap-3">
               {[Twitter, Linkedin, Github].map((Icon, i) => (
@@ -97,15 +100,15 @@ export function Footer() {
             <Mail className="w-5 h-5 text-[#1FAF5A]" />
             <div>
               <div className="text-white text-sm" style={{ fontWeight: 600 }}>
-                Restez informé des avancées EKOLO
+                {t("footer.newsletter.title")}
               </div>
-              <div className="text-white/40 text-xs">Actualités, déploiements et nouvelles fonctionnalités</div>
+              <div className="text-white/40 text-xs">{t("footer.newsletter.subtitle")}</div>
             </div>
           </div>
           <div className="flex gap-2 w-full sm:w-auto">
             <input
               type="email"
-              placeholder="votre@email.com"
+              placeholder={t("footer.newsletter.placeholder")}
               className="flex-1 sm:w-64 px-4 py-2.5 rounded-xl text-white text-sm outline-none"
               style={{
                 background: "rgba(255,255,255,0.06)",
@@ -119,7 +122,7 @@ export function Footer() {
                 boxShadow: "0 0 15px rgba(31,175,90,0.3)",
               }}
             >
-              S'abonner
+              {t("footer.newsletter.subscribe")}
               <ArrowUpRight className="w-3.5 h-3.5" />
             </button>
           </div>
@@ -132,11 +135,11 @@ export function Footer() {
         style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
       >
         <p className="text-white/25 text-xs">
-          © 2026 EKOLO — Tous droits réservés. Plateforme environnementale intelligente.
+          {t("footer.copyright")}
         </p>
         <div className="flex gap-6">
-          {["Confidentialité", "Conditions d'utilisation", "Contact"].map((item) => (
-            <a key={item} href="#" className="text-white/25 hover:text-white/50 text-xs transition-colors">
+          {[t("footer.legal.privacy"), t("footer.legal.terms"), t("footer.legal.contact")].map((item, idx) => (
+            <a key={idx} href="#" className="text-white/25 hover:text-white/50 text-xs transition-colors">
               {item}
             </a>
           ))}

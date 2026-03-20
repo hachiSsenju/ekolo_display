@@ -1,40 +1,42 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { AlertTriangle, Users, Clock, Database } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const POLLUTION_IMG = "https://images.unsplash.com/photo-1662611527358-7855c4fe8398?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwd2FzdGUlMjBwb2xsdXRpb24lMjBzdHJlZXRzfGVufDF8fHx8MTc3MjA1NjE0NHww&ixlib=rb-4.1.0&q=80&w=1080";
 const GARBAGE_IMG = "https://images.unsplash.com/photo-1758061398870-a86a0fa1a6c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2ElMjBnYXJiYWdlJTIwdXJiYW4lMjBlbnZpcm9ubWVudHxlbnwxfHx8fDE3NzIwNTYxNDV8MA&ixlib=rb-4.1.0&q=80&w=1080";
 
-const problems = [
-  {
-    icon: AlertTriangle,
-    title: "Pollution croissante",
-    desc: "Les déchets sauvages augmentent dans les zones urbaines africaines, saturant les systèmes de collecte existants et menaçant la santé publique.",
-    color: "#ff6b35",
-  },
-  {
-    icon: Users,
-    title: "Manque de coordination",
-    desc: "Les municipalités, ONG et citoyens agissent en silos, sans outil commun pour centraliser les signalements et coordonner les actions.",
-    color: "#f7c59f",
-  },
-  {
-    icon: Clock,
-    title: "Interventions tardives",
-    desc: "Sans système de détection précoce, les foyers de pollution s'étendent avant d'être pris en charge, multipliant les coûts d'intervention.",
-    color: "#e8c547",
-  },
-  {
-    icon: Database,
-    title: "Données non centralisées",
-    desc: "Les données environnementales sont dispersées, rendant impossible toute analyse stratégique et prise de décision éclairée à l'échelle.",
-    color: "#8ecae6",
-  },
-];
-
 export function Problem() {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const inView = useInView(ref, { once: false, amount: 0.2 });
+
+  const problems = [
+    {
+      icon: AlertTriangle,
+      title: t("problem.list.0.title"),
+      desc: t("problem.list.0.desc"),
+      color: "#ff6b35",
+    },
+    {
+      icon: Users,
+      title: t("problem.list.1.title"),
+      desc: t("problem.list.1.desc"),
+      color: "#f7c59f",
+    },
+    {
+      icon: Clock,
+      title: t("problem.list.2.title"),
+      desc: t("problem.list.2.desc"),
+      color: "#e8c547",
+    },
+    {
+      icon: Database,
+      title: t("problem.list.3.title"),
+      desc: t("problem.list.3.desc"),
+      color: "#8ecae6",
+    },
+  ];
 
   return (
     <section
@@ -63,16 +65,16 @@ export function Problem() {
             className="inline-block px-4 py-1.5 rounded-full text-sm text-[#1FAF5A] mb-4"
             style={{ background: "rgba(31,175,90,0.1)", border: "1px solid rgba(31,175,90,0.2)" }}
           >
-            Le problème
+            {t("problem.badge")}
           </span>
           <h2
             className="text-white mb-4"
             style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 800 }}
           >
-            Défis environnementaux en Afrique urbaine
+            {t("problem.title")}
           </h2>
           <p className="text-white/50 max-w-2xl mx-auto" style={{ lineHeight: 1.7 }}>
-            La pollution urbaine reste l'un des défis environnementaux majeurs des villes africaines. Sans outils adaptés, la réponse reste fragmentée et inefficace.
+            {t("problem.subtitle")}
           </p>
         </motion.div>
 
@@ -111,12 +113,12 @@ export function Problem() {
                     style={{ background: "rgba(255,107,53,0.2)", border: "1px solid rgba(255,107,53,0.3)" }}
                   >
                     <AlertTriangle className="w-3.5 h-3.5 text-[#ff6b35]" />
-                    <span className="text-[#ff6b35] text-xs font-semibold">Défi majeur</span>
+                    <span className="text-[#ff6b35] text-xs font-semibold">{t("problem.cards.pollution.badge")}</span>
                   </div>
                   <h3 className="text-white" style={{ fontWeight: 700, fontSize: "1.1rem" }}>
-                    Pollution urbaine
+                    {t("problem.cards.pollution.title")}
                   </h3>
-                  <p className="text-white/50 text-sm">Saturation des systèmes de collecte</p>
+                  <p className="text-white/50 text-sm">{t("problem.cards.pollution.desc")}</p>
                 </div>
               </div>
 
@@ -145,12 +147,12 @@ export function Problem() {
                     style={{ background: "rgba(232,197,71,0.2)", border: "1px solid rgba(232,197,71,0.3)" }}
                   >
                     <Database className="w-3.5 h-3.5 text-[#e8c547]" />
-                    <span className="text-[#e8c547] text-xs font-semibold">Urgence</span>
+                    <span className="text-[#e8c547] text-xs font-semibold">{t("problem.cards.garbage.badge")}</span>
                   </div>
                   <h3 className="text-white" style={{ fontWeight: 700, fontSize: "1.1rem" }}>
-                    Déchets non gérés
+                    {t("problem.cards.garbage.title")}
                   </h3>
-                  <p className="text-white/50 text-sm">Impact sur la santé publique</p>
+                  <p className="text-white/50 text-sm">{t("problem.cards.garbage.desc")}</p>
                 </div>
               </div>
             </div>

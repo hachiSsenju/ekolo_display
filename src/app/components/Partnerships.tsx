@@ -1,39 +1,39 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Building2, Heart, Factory, Star } from "lucide-react";
-
-const TEAM_IMG = "https://images.unsplash.com/photo-1742996111692-2d924f12a058?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwYnVzaW5lc3MlMjBwYXJ0bmVyc2hpcCUyMG1lZXRpbmd8ZW58MXx8fHwxNzcyMDU2MTkxfDA&ixlib=rb-4.1.0&q=80&w=1080";
-
-const categories = [
-  {
-    icon: Building2,
-    title: "Municipalités",
-    desc: "Nous recherchons des collaborations avec les autorités locales africaines pour des projets pilotes et un déploiement terrain.",
-    color: "#1FAF5A",
-  },
-  {
-    icon: Heart,
-    title: "ONG & Associations",
-    desc: "Opportunités de partenariat avec des organisations environnementales pour amplifier l'impact sur le terrain.",
-    color: "#f7c59f",
-  },
-  {
-    icon: Factory,
-    title: "Entreprises",
-    desc: "Ouverture aux entreprises intéressées par des solutions environnementales et RSE en Afrique.",
-    color: "#a78bfa",
-  },
-  {
-    icon: Star,
-    title: "Sponsors & Investisseurs",
-    desc: "Recherche d'investissements pour accélérer le développement et le déploiement de la plateforme en Afrique.",
-    color: "#3dd9eb",
-  },
-];
+import { useTranslation } from "react-i18next";
 
 export function Partnerships() {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const inView = useInView(ref, { once: false, amount: 0.2 });
+
+  const categories = [
+    {
+      icon: Building2,
+      title: t("partnerships.cards.0.title"),
+      desc: t("partnerships.cards.0.desc"),
+      color: "#1FAF5A",
+    },
+    {
+      icon: Heart,
+      title: t("partnerships.cards.1.title"),
+      desc: t("partnerships.cards.1.desc"),
+      color: "#f7c59f",
+    },
+    {
+      icon: Factory,
+      title: t("partnerships.cards.2.title"),
+      desc: t("partnerships.cards.2.desc"),
+      color: "#a78bfa",
+    },
+    {
+      icon: Star,
+      title: t("partnerships.cards.3.title"),
+      desc: t("partnerships.cards.3.desc"),
+      color: "#3dd9eb",
+    },
+  ];
 
   return (
     <section
@@ -60,16 +60,16 @@ export function Partnerships() {
             className="inline-block px-4 py-1.5 rounded-full text-sm text-[#1FAF5A] mb-4"
             style={{ background: "rgba(31,175,90,0.1)", border: "1px solid rgba(31,175,90,0.2)" }}
           >
-            Opportunités de partenariat
+            {t("partnerships.badge")}
           </span>
           <h2
             className="text-white mb-4"
             style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)", fontWeight: 800 }}
           >
-            Construisons ensemble l'avenir
+            {t("partnerships.title")}
           </h2>
           <p className="text-white/50 max-w-2xl mx-auto" style={{ lineHeight: 1.7 }}>
-            EKOLO est à la recherche de partenaires stratégiques pour transformer la gestion environnementale urbaine en Afrique.
+            {t("partnerships.subtitle")}
           </p>
         </motion.div>
 

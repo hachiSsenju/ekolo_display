@@ -1,0 +1,227 @@
+{
+  "header": {
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "solution": "Solution",
+      "impact": "Impact",
+      "prototypes": "Prototypes",
+      "contact": "Contact"
+    },
+    "cta_prototypes": "Voir les prototypes"
+  },
+  "hero": {
+    "badge": "Solution environnementale pour l'Afrique",
+    "title_part1": "L'intelligence au service des villes ",
+    "title_part2": "africaines",
+    "subtitle": "Parce que l'Afrique mérite des villes propres, modernes et intelligentes.",
+    "description": "Ekolo connecte citoyens et municipalités pour détecter, analyser et traiter la pollution urbaine en temps réel.",
+    "cta_platform": "Découvrir la plateforme",
+    "cta_prototypes": "Voir les prototypes",
+    "scroll": "Défiler"
+  },
+  "footer": {
+    "description": "L'intelligence collective au service d'un monde plus propre. Signalement, analyse IA, intervention rapide.",
+    "platforms": {
+      "title": "Plateforme",
+      "home": "Accueil",
+      "about": "À propos",
+      "how_it_works": "Comment ça marche",
+      "impact": "Impact"
+    },
+    "prototypes": {
+      "title": "Prototypes",
+      "mobile": "App Mobile",
+      "admin": "Dashboard Admin"
+    },
+    "newsletter": {
+      "title": "Restez informé des avancées EKOLO",
+      "subtitle": "Actualités, déploiements et nouvelles fonctionnalités",
+      "placeholder": "votre@email.com",
+      "subscribe": "S'abonner"
+    },
+    "copyright": "© 2026 EKOLO — Tous droits réservés. Plateforme environnementale intelligente.",
+    "legal": {
+      "privacy": "Confidentialité",
+      "terms": "Conditions d'utilisation",
+      "contact": "Contact"
+    }
+  },
+  "problem": {
+    "badge": "Le problème",
+    "title": "Défis environnementaux en Afrique urbaine",
+    "subtitle": "La pollution urbaine reste l'un des défis environnementaux majeurs des villes africaines. Sans outils adaptés, la réponse reste fragmentée et inefficace.",
+    "list": [
+      {
+        "title": "Pollution croissante",
+        "desc": "Les déchets sauvages augmentent dans les zones urbaines africaines, saturant les systèmes de collecte existants et menaçant la santé publique."
+      },
+      {
+        "title": "Manque de coordination",
+        "desc": "Les municipalités, ONG et citoyens agissent en silos, sans outil commun pour centraliser les signalements et coordonner les actions."
+      },
+      {
+        "title": "Interventions tardives",
+        "desc": "Sans système de détection précoce, les foyers de pollution s'étendent avant d'être pris en charge, multipliant les coûts d'intervention."
+      },
+      {
+        "title": "Données non centralisées",
+        "desc": "Les données environnementales sont dispersées, rendant impossible toute analyse stratégique et prise de décision éclairée à l'échelle."
+      }
+    ],
+    "cards": {
+      "pollution": {
+        "badge": "Défi majeur",
+        "title": "Pollution urbaine",
+        "desc": "Saturation des systèmes de collecte"
+      },
+      "garbage": {
+        "badge": "Urgence",
+        "title": "Déchets non gérés",
+        "desc": "Impact sur la santé publique"
+      }
+    }
+  },
+  "solution": {
+    "badge": "Notre solution",
+    "title": "Comment ça marche",
+    "subtitle": "EKOLO simplifie la chaîne de traitement environnemental en 4 étapes claires, du signalement à l'intervention.",
+    "steps": [
+      {
+        "title": "Signalement photo/vidéo",
+        "desc": "Les citoyens signalent en temps réel via l'app mobile multilingue avec géolocalisation automatique. L'IA intégrée facilite le signalement et identifie automatiquement le type de déchet. Système de récompenses et campagnes écologiques pour motiver la participation."
+      },
+      {
+        "title": "Analyse par IA",
+        "desc": "Notre moteur d'intelligence artificielle classe, identifie le type de déchet avec précision, évalue la fiabilité de chaque signalement et priorise les interventions en millisecondes pour une réponse optimale."
+      },
+      {
+        "title": "Dashboard stratégique multilingue",
+        "desc": "Les autorités visualisent en temps réel la carte des incidents, les tendances et les zones prioritaires. L'IA fournit des analyses précises sur les types de déchets et la fiabilité des signalements. Interface disponible dans toutes les langues locales."
+      },
+      {
+        "title": "Intervention rapide",
+        "desc": "Les équipes terrain reçoivent des missions automatisées et optimisées avec toutes les informations détaillées (type de déchet, fiabilité, priorité), réduisant drastiquement les délais d'intervention."
+      }
+    ],
+    "bottom_cards": {
+      "mobile": {
+        "title": "App Mobile",
+        "desc": "IA  Récompenses  Multilingue"
+      },
+      "analytics": {
+        "title": "Dashboard IA",
+        "desc": "Fiabilité  Types de déchets  Multilingue"
+      }
+    }
+  },
+  "impact": {
+    "badge": "Notre vision",
+    "title": "Un écosystème intelligent pour l'Afrique",
+    "subtitle": "EKOLO vise à créer un pont entre citoyens, autorités et technologie pour des villes africaines plus durables.",
+    "cards": [
+      {
+        "title": "Signalement citoyen intelligent",
+        "description": "App mobile multilingue avec IA intégrée pour identifier automatiquement le type de déchet. Système de récompenses et campagnes écologiques pour maximiser la participation citoyenne."
+      },
+      {
+        "title": "Engagement communautaire",
+        "description": "Mobilisation des communautés grâce aux langues locales africaines, campagnes écologiques ciblées et système de récompenses motivant pour un environnement urbain plus propre."
+      },
+      {
+        "title": "Intervention précise",
+        "description": "Dashboard multilingue avec IA qui évalue la fiabilité des signalements et identifie le type exact de déchet, permettant une coordination optimale des équipes terrain."
+      },
+      {
+        "title": "Analyse prédictive IA",
+        "description": "Intelligence artificielle qui classe les signalements, évalue leur fiabilité, identifie les types de déchets et prédit les zones à risque pour optimiser les ressources municipales."
+      }
+    ],
+    "vision_title": "Une solution pensée pour l'Afrique",
+    "vision_desc": "EKOLO adapte les dernières technologies d'IA et de data analytics aux réalités des villes africaines. Notre plateforme facilite le signalement, accélère les interventions et crée un cercle vertueux d'amélioration continue pour un environnement urbain plus sain."
+  },
+  "prototypes": {
+    "badge": "Nos prototypes",
+    "title": "Explorez l'écosystème EKOLO",
+    "subtitle": "Accédez aux différentes interfaces et prototypes fonctionnels de la plateforme.",
+    "interactive": "Prototypes interactifs - Cliquez pour tester",
+    "cards": [
+      {
+        "tag": "App Mobile",
+        "title": "EKOLO Citizen App",
+        "desc": "App multilingue avec IA intégrée pour faciliter le signalement : identification automatique du type de déchet, géolocalisation, photo. Système de récompenses et campagnes écologiques pour motiver les citoyens. Disponible dans toutes les langues locales africaines.",
+        "badge": "iOS & Android"
+      },
+      {
+        "tag": "Dashboard Admin",
+        "title": "Centre de Commande Municipal",
+        "desc": "Interface multilingue de vue globale avec analyse IA : précision sur le type de déchet, évaluation de la fiabilité des signalements, gestion des équipes terrain et rapports analytiques avancés. Adaptée à toutes les langues locales.",
+        "badge": "Web App"
+      }
+    ],
+    "cta": "Voir le prototype"
+  },
+  "partnerships": {
+    "badge": "Opportunités de partenariat",
+    "title": "Construisons ensemble l'avenir",
+    "subtitle": "EKOLO est à la recherche de partenaires stratégiques pour transformer la gestion environnementale urbaine en Afrique.",
+    "cards": [
+      {
+        "title": "Municipalités",
+        "desc": "Nous recherchons des collaborations avec les autorités locales africaines pour des projets pilotes et un déploiement terrain."
+      },
+      {
+        "title": "ONG & Associations",
+        "desc": "Opportunités de partenariat avec des organisations environnementales pour amplifier l'impact sur le terrain."
+      },
+      {
+        "title": "Entreprises",
+        "desc": "Ouverture aux entreprises intéressées par des solutions environnementales et RSE en Afrique."
+      },
+      {
+        "title": "Sponsors & Investisseurs",
+        "desc": "Recherche d'investissements pour accélérer le développement et le déploiement de la plateforme en Afrique."
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Rejoignez le mouvement EKOLO",
+    "subtitle": "Partenaire, investisseur, municipalité ou simple curieux  contactez-nous pour en savoir plus ou rejoindre l'aventure.",
+    "info": {
+      "email_title": "Email officiel",
+      "email_desc": "Notre équipe répond sous 24h ouvrées. Pour les partenariats institutionnels, précisez votre organisation.",
+      "follow": "Suivez-nous",
+      "call_title": "Appel à partenaires",
+      "call_desc": "Nous recherchons des municipalités pilotes et des ONG pour notre prochaine phase de déploiement. Rejoignez notre programme beta.",
+      "call_badge": "Candidatures ouvertes"
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "fields": {
+        "name": {
+          "label": "Nom complet",
+          "placeholder": "Amara Diallo"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "amara@exemple.com"
+        },
+        "org": {
+          "label": "Organisation",
+          "placeholder": "Mairie de Dakar / ONG / Entreprise"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Décrivez votre projet ou votre demande..."
+        }
+      },
+      "submit": "Envoyer le message",
+      "success": {
+        "title": "Message envoyé !",
+        "desc": "Notre équipe vous répondra dans les 24 heures.",
+        "another": "Envoyer un autre message"
+      }
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "solution": "Solution",
+      "impact": "Impact",
+      "prototypes": "Prototypes",
+      "contact": "Contact"
+    },
+    "cta_prototypes": "See Prototypes"
+  },
+  "hero": {
+    "badge": "Environmental solution for Africa",
+    "title_part1": "Intelligence serving African ",
+    "title_part2": "cities",
+    "subtitle": "Because Africa deserves clean, modern, and smart cities.",
+    "description": "Ekolo connects citizens and municipalities to detect, analyze, and treat urban pollution in real-time.",
+    "cta_platform": "Discover the platform",
+    "cta_prototypes": "See prototypes",
+    "scroll": "Scroll"
+  },
+  "footer": {
+    "description": "Collective intelligence serving a cleaner world. Reporting, AI analysis, rapid intervention.",
+    "platforms": {
+      "title": "Platform",
+      "home": "Home",
+      "about": "About",
+      "how_it_works": "How it works",
+      "impact": "Impact"
+    },
+    "prototypes": {
+      "title": "Prototypes",
+      "mobile": "Mobile App",
+      "admin": "Admin Dashboard"
+    },
+    "newsletter": {
+      "title": "Stay informed about EKOLO's progress",
+      "subtitle": "News, deployments, and new features",
+      "placeholder": "your@email.com",
+      "subscribe": "Subscribe"
+    },
+    "copyright": "© 2026 EKOLO — All rights reserved. Smart environmental platform.",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "contact": "Contact"
+    }
+  },
+  "problem": {
+    "badge": "The problem",
+    "title": "Environmental Challenges in Urban Africa",
+    "subtitle": "Urban pollution remains one of the major environmental challenges in African cities. Without appropriate tools, the response remains fragmented and inefficient.",
+    "list": [
+      {
+        "title": "Growing Pollution",
+        "desc": "Illegal dumping is increasing in African urban areas, overwhelming existing collection systems and threatening public health."
+      },
+      {
+        "title": "Lack of Coordination",
+        "desc": "Municipalities, NGOs, and citizens act in silos, without a common tool to centralize reports and coordinate actions."
+      },
+      {
+        "title": "Delayed Interventions",
+        "desc": "Without an early detection system, pollution hotspots expand before being addressed, multiplying intervention costs."
+      },
+      {
+        "title": "Decentralized Data",
+        "desc": "Environmental data is scattered, making any strategic analysis and informed decision-making at scale impossible."
+      }
+    ],
+    "cards": {
+      "pollution": {
+        "badge": "Major challenge",
+        "title": "Urban pollution",
+        "desc": "Saturation of collection systems"
+      },
+      "garbage": {
+        "badge": "Emergency",
+        "title": "Unmanaged waste",
+        "desc": "Public health impact"
+      }
+    }
+  },
+  "solution": {
+    "badge": "Our solution",
+    "title": "How it works",
+    "subtitle": "EKOLO simplifies the environmental treatment chain in 4 clear steps, from reporting to intervention.",
+    "steps": [
+      {
+        "title": "Photo/Video Reporting",
+        "desc": "Citizens report in real-time via the multilingual mobile app with automatic geolocation. Built-in AI facilitates reporting and automatically identifies waste types. Reward system and ecological campaigns motivate participation."
+      },
+      {
+        "title": "AI Analysis",
+        "desc": "Our artificial intelligence engine accurately classifies waste types, assesses the reliability of each report, and prioritizes interventions in milliseconds for an optimal response."
+      },
+      {
+        "title": "Multilingual Strategic Dashboard",
+        "desc": "Authorities view the incident map, trends, and priority areas in real time. AI provides accurate analytics on waste types and report reliability. Interface available in all local languages."
+      },
+      {
+        "title": "Rapid Intervention",
+        "desc": "Field teams receive automated and optimized missions with all detailed information (waste type, reliability, priority), drastically reducing intervention times."
+      }
+    ],
+    "bottom_cards": {
+      "mobile": {
+        "title": "Mobile App",
+        "desc": "AI  Rewards  Multilingual"
+      },
+      "analytics": {
+        "title": "AI Dashboard",
+        "desc": "Reliability  Waste Types  Multilingual"
+      }
+    }
+  },
+  "impact": {
+    "badge": "Our vision",
+    "title": "A smart ecosystem for Africa",
+    "subtitle": "EKOLO aims to build a bridge between citizens, authorities, and technology for more sustainable African cities.",
+    "cards": [
+      {
+        "title": "Smart Citizen Reporting",
+        "description": "Multilingual mobile app with built-in AI to automatically identify waste types. Reward systems and ecological campaigns to maximize citizen participation."
+      },
+      {
+        "title": "Community Engagement",
+        "description": "Mobilizing communities using local African languages, targeted ecological campaigns, and motivating reward systems for a cleaner urban environment."
+      },
+      {
+        "title": "Precise Intervention",
+        "description": "Multilingual AI dashboard that evaluates the reliability of reports and determines exact waste types, enabling optimal coordination of field teams."
+      },
+      {
+        "title": "Predictive AI Analysis",
+        "description": "Artificial intelligence that classifies reports, assesses reliability, identifies waste types, and predicts high-risk areas to optimize municipal resources."
+      }
+    ],
+    "vision_title": "A solution designed for Africa",
+    "vision_desc": "EKOLO adapts the latest AI and data analytics technologies to the realities of African cities. Our platform speeds up interventions, facilitates reporting, and creates a virtuous circle of continuous improvement for a healthier urban environment."
+  },
+  "prototypes": {
+    "badge": "Our prototypes",
+    "title": "Explore the EKOLO ecosystem",
+    "subtitle": "Access the platform's various interfaces and functional prototypes.",
+    "interactive": "Interactive prototypes - Click to test",
+    "cards": [
+      {
+        "tag": "Mobile App",
+        "title": "EKOLO Citizen App",
+        "desc": "Multilingual app with built-in AI for easy reporting: automatic waste type identification, geolocation, photo. Reward systems and ecological campaigns to motivate citizens. Available in all local African languages.",
+        "badge": "iOS & Android"
+      },
+      {
+        "tag": "Admin Dashboard",
+        "title": "Municipal Command Center",
+        "desc": "Multilingual overview interface with AI analysis: precision on waste type, assessment of report reliability, field team management, and advanced analytical reports. Adapted to all local languages.",
+        "badge": "Web App"
+      }
+    ],
+    "cta": "View prototype"
+  },
+  "partnerships": {
+    "badge": "Partnership Opportunities",
+    "title": "Let's build the future together",
+    "subtitle": "EKOLO is looking for strategic partners to transform urban environmental management in Africa.",
+    "cards": [
+      {
+        "title": "Municipalities",
+        "desc": "We are seeking collaborations with local African authorities for pilot projects and field deployment."
+      },
+      {
+        "title": "NGOs & Associations",
+        "desc": "Partnership opportunities with environmental organizations to amplify impact on the ground."
+      },
+      {
+        "title": "Companies",
+        "desc": "Open to companies interested in environmental and CSR solutions in Africa."
+      },
+      {
+        "title": "Sponsors & Investors",
+        "desc": "Seeking investments to accelerate the development and deployment of the platform in Africa."
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Join the EKOLO movement",
+    "subtitle": "Partner, investor, municipality, or simply curious  contact us to learn more or join the adventure.",
+    "info": {
+      "email_title": "Official Email",
+      "email_desc": "Our team responds within 24 business hours. For institutional partnerships, please specify your organization.",
+      "follow": "Follow us",
+      "call_title": "Call for partners",
+      "call_desc": "We are looking for pilot municipalities and NGOs for our next deployment phase. Join our beta program.",
+      "call_badge": "Applications open"
+    },
+    "form": {
+      "title": "Send us a message",
+      "fields": {
+        "name": {
+          "label": "Full name",
+          "placeholder": "Amara Diallo"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "amara@example.com"
+        },
+        "org": {
+          "label": "Organization",
+          "placeholder": "City of Dakar / NGO / Company"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Describe your project or request..."
+        }
+      },
+      "submit": "Send message",
+      "success": {
+        "title": "Message sent!",
+        "desc": "Our team will answer you within 24 hours.",
+        "another": "Send another message"
+      }
+    }
+  }
+}

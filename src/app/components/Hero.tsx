@@ -2,10 +2,12 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowDown } from "lucide-react";
 import { useRef } from "react";
 import demoVideo from "../../assets/videos/demo.mp4";
+import { useTranslation } from "react-i18next";
 
 const HERO_BG = "https://images.unsplash.com/photo-1744907895363-d351aa6019ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwY2l0eSUyMGFlcmlhbCUyMHZpZXclMjBza3lsaW5lfGVufDF8fHx8MTc3MjA1NjAzOXww&ixlib=rb-4.1.0&q=80&w=1080";
 
 export function Hero() {
+  const { t } = useTranslation();
   const ref = useRef(null);
 
   const handleNav = (href: string) => {
@@ -39,7 +41,7 @@ export function Hero() {
               }}
             >
               <div className="w-2 h-2 rounded-full bg-[#1FAF5A] animate-pulse" />
-              <span className="text-[#1FAF5A] text-sm tracking-wider">Solution environnementale pour l'Afrique</span>
+              <span className="text-[#1FAF5A] text-sm tracking-wider">{t("hero.badge")}</span>
             </motion.div>
 
             <motion.h1
@@ -49,14 +51,14 @@ export function Hero() {
               className="text-white mb-6"
               style={{ fontSize: "clamp(2.2rem, 5vw, 4.5rem)", fontWeight: 800, lineHeight: 1.1 }}
             >
-              L'intelligence au service des villes{" "}
+              {t("hero.title_part1")}
               <motion.span
                 style={{ color: "#1FAF5A" }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
               >
-                africaines
+                {t("hero.title_part2")}
               </motion.span>
             </motion.h1>
 
@@ -67,7 +69,7 @@ export function Hero() {
               className="text-white/80 mb-6"
               style={{ fontSize: "1.6rem", lineHeight: 1.4, fontWeight: 700 }}
             >
-              Parce que l'Afrique mérite des villes propres, modernes et intelligentes.
+              {t("hero.subtitle")}
             </motion.p>
 
             <motion.p
@@ -77,7 +79,7 @@ export function Hero() {
               className="text-white/70 mb-4 max-w-2xl"
               style={{ fontSize: "1.1rem", lineHeight: 1.7 }}
             >
-              Ekolo connecte citoyens et municipalités pour détecter, analyser et traiter la pollution urbaine en temps réel.
+              {t("hero.description")}
             </motion.p>
 
             <motion.div
@@ -97,7 +99,7 @@ export function Hero() {
                   fontSize: "1rem",
                 }}
               >
-                Découvrir la plateforme
+                {t("hero.cta_platform")}
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
@@ -111,7 +113,7 @@ export function Hero() {
                   fontSize: "1rem",
                 }}
               >
-                Voir les prototypes
+                {t("hero.cta_prototypes")}
               </motion.button>
             </motion.div>
           </div>
@@ -151,7 +153,7 @@ export function Hero() {
         transition={{ delay: 1.5, duration: 0.8 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30 hover:text-white/60 transition-colors"
       >
-        <span className="text-xs tracking-widest uppercase">Défiler</span>
+        <span className="text-xs tracking-widest uppercase">{t("hero.scroll")}</span>
         <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}>
           <ArrowDown className="w-4 h-4" />
         </motion.div>

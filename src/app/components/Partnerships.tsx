@@ -79,7 +79,7 @@ export function Partnerships() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-6xl mx-auto mb-16"
         >
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {categories.map((c, i) => {
               const Icon = c.icon;
               return (

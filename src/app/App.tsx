@@ -13,7 +13,7 @@ const PLATFORM_BG = "https://images.unsplash.com/photo-1771350386143-20e64673331
 export default function App() {
   return (
     <div
-      className="min-h-screen relative"
+      className="min-h-screen relative overflow-x-hidden w-full"
       style={{ fontFamily: "'Inter', system-ui, sans-serif" }}
     >
       {/* Background image fixed */}

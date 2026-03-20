@@ -87,7 +87,7 @@ export function Problem() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
               <div
                 className="relative rounded-3xl overflow-hidden group"
                 style={{
@@ -165,7 +165,7 @@ export function Problem() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="max-w-6xl mx-auto"
           >
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {problems.map((p, i) => {
                 const Icon = p.icon;
                 return (

@@ -87,7 +87,7 @@ export function Prototypes() {
         </motion.div>
 
         {/* Grid with 2 cards */}
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {prototypes.map((p, i) => (
             <motion.div
               key={p.title}

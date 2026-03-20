@@ -152,7 +152,7 @@ export function Solution() {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 0.6 }}
-          className="mt-28 grid lg:grid-cols-2 gap-8"
+          className="mt-16 lg:mt-28 grid grid-cols-1 lg:grid-cols-2 gap-8"
         >
           {[
             { img: MOBILE_IMG, label: t("solution.bottom_cards.mobile.title"), sub: t("solution.bottom_cards.mobile.desc") },

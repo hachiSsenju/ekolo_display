@@ -94,9 +94,8 @@ export function Impact() {
                 transition={{ duration: 0.7, delay: i * 0.12 }}
                 className="relative rounded-3xl p-8 group hover:scale-105 transition-transform duration-300"
                 style={{
-                  background: "rgba(255,255,255,0.03)",
-                  border: "1px solid rgba(255,255,255,0.08)",
-                  backdropFilter: "blur(20px)",
+                  background: "rgba(15,30,20,0.85)",
+                  border: "1px solid rgba(255,255,255,0.10)",
                 }}
               >
                 {/* Glow on hover */}
@@ -136,8 +135,8 @@ export function Impact() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-16 rounded-3xl p-8 text-center"
           style={{
-            background: "rgba(255,255,255,0.03)",
-            border: "1px solid rgba(255,255,255,0.07)",
+            background: "rgba(15,30,20,0.85)",
+            border: "1px solid rgba(255,255,255,0.10)",
           }}
         >
           <h3 className="text-white mb-4" style={{ fontWeight: 700, fontSize: "1.3rem" }}>

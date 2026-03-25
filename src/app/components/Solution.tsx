@@ -126,9 +126,8 @@ export function Solution() {
                   <div
                     className="rounded-2xl p-6 h-full transition-all duration-300 group-hover:translate-y-[-4px]"
                     style={{
-                      background: "rgba(255,255,255,0.03)",
-                      border: `1px solid rgba(255,255,255,0.07)`,
-                      backdropFilter: "blur(10px)",
+                      background: "rgba(15,30,20,0.85)",
+                      border: `1px solid rgba(255,255,255,0.10)`,
                     }}
                   >
                     <h3

@@ -176,9 +176,8 @@ export function Problem() {
                     transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
                     className="group relative rounded-2xl p-6 transition-all duration-300 hover:translate-y-[-4px]"
                     style={{
-                      background: "rgba(255,255,255,0.02)",
-                      border: "1px solid rgba(255,255,255,0.08)",
-                      backdropFilter: "blur(12px)",
+                      background: "rgba(15,30,20,0.85)",
+                      border: "1px solid rgba(255,255,255,0.10)",
                     }}
                   >
                     {/* Icon */}

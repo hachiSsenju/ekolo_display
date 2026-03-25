@@ -107,9 +107,8 @@ export function Hero() {
                 onClick={() => handleNav("#prototypes")}
                 className="px-8 py-4 rounded-full text-white flex items-center gap-2 transition-all duration-300"
                 style={{
-                  background: "rgba(255,255,255,0.06)",
+                  background: "rgba(30,55,40,0.9)",
                   border: "1px solid rgba(255,255,255,0.15)",
-                  backdropFilter: "blur(10px)",
                   fontSize: "1rem",
                 }}
               >

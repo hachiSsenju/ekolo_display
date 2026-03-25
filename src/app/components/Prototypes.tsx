@@ -117,9 +117,8 @@ function PrototypeCard({
     <div
       className="relative rounded-3xl overflow-hidden group cursor-pointer h-full transition-all duration-500 hover:scale-[1.02]"
       style={{
-        background: "rgba(255,255,255,0.03)",
-        border: `1px solid rgba(255,255,255,0.07)`,
-        backdropFilter: "blur(10px)",
+        background: "rgba(10,25,15,0.92)",
+        border: `1px solid rgba(255,255,255,0.10)`,
         boxShadow: "0 20px 60px rgba(0,0,0,0.4)",
         minHeight: 380,
       }}

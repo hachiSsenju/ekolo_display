@@ -21,7 +21,8 @@ export function Footer() {
     <footer
       className="relative"
       style={{
-        borderTop: "1px solid rgba(31,175,90,0.12)",
+        background: "rgba(3,10,5,0.97)",
+        borderTop: "2px solid rgba(31,175,90,0.25)",
       }}
     >
       {/* Top section */}
@@ -55,7 +56,7 @@ export function Footer() {
                   key={i}
                   href="#"
                   className="w-9 h-9 rounded-xl flex items-center justify-center text-white/30 hover:text-[#1FAF5A] transition-all duration-200 hover:scale-110"
-                  style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}
+                  style={{ background: "rgba(15,30,20,0.85)", border: "1px solid rgba(255,255,255,0.12)" }}
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -92,8 +93,8 @@ export function Footer() {
         <div
           className="mt-14 p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4"
           style={{
-            background: "rgba(31,175,90,0.07)",
-            border: "1px solid rgba(31,175,90,0.18)",
+            background: "rgba(15,30,20,0.9)",
+            border: "1px solid rgba(31,175,90,0.25)",
           }}
         >
           <div className="flex items-center gap-3">
@@ -111,8 +112,8 @@ export function Footer() {
               placeholder={t("footer.newsletter.placeholder")}
               className="flex-1 sm:w-64 px-4 py-2.5 rounded-xl text-white text-sm outline-none"
               style={{
-                background: "rgba(255,255,255,0.06)",
-                border: "1px solid rgba(255,255,255,0.1)",
+                background: "rgba(30,55,40,0.9)",
+                border: "1px solid rgba(255,255,255,0.15)",
               }}
             />
             <button
@@ -132,14 +133,14 @@ export function Footer() {
       {/* Bottom bar */}
       <div
         className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3"
-        style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}
+        style={{ borderTop: "1px solid rgba(255,255,255,0.10)" }}
       >
-        <p className="text-white/25 text-xs">
+        <p className="text-white/60 text-xs">
           {t("footer.copyright")}
         </p>
         <div className="flex gap-6">
           {[t("footer.legal.privacy"), t("footer.legal.terms"), t("footer.legal.contact")].map((item, idx) => (
-            <a key={idx} href="#" className="text-white/25 hover:text-white/50 text-xs transition-colors">
+            <a key={idx} href="#" className="text-white/55 hover:text-white text-xs transition-colors">
               {item}
             </a>
           ))}

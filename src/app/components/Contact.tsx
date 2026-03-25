@@ -69,8 +69,8 @@ export function Contact() {
             <div
               className="p-8 rounded-3xl"
               style={{
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.07)",
+                background: "rgba(15,30,20,0.85)",
+                border: "1px solid rgba(255,255,255,0.10)",
               }}
             >
               <div className="flex items-center gap-3 mb-4">
@@ -100,8 +100,8 @@ export function Contact() {
             <div
               className="p-8 rounded-3xl"
               style={{
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.07)",
+                background: "rgba(15,30,20,0.85)",
+                border: "1px solid rgba(255,255,255,0.10)",
               }}
             >
               <h3 className="text-white mb-4 text-sm" style={{ fontWeight: 600 }}>
@@ -161,9 +161,8 @@ export function Contact() {
             <div
               className="p-8 rounded-3xl h-full"
               style={{
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.07)",
-                backdropFilter: "blur(20px)",
+                background: "rgba(15,30,20,0.85)",
+                border: "1px solid rgba(255,255,255,0.10)",
               }}
             >
               {sent ? (

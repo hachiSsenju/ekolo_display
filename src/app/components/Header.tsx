@@ -15,6 +15,7 @@ export function Header() {
     { label: t("header.nav.solution"), href: "#solution" },
     { label: t("header.nav.impact"), href: "#impact" },
     { label: t("header.nav.prototypes"), href: "#prototypes" },
+    { label: t("header.nav.partners") || "Partenaires", href: "#partenaires" },
     { label: t("header.nav.contact"), href: "#contact" },
   ];
 
@@ -42,9 +43,8 @@ export function Header() {
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
       style={{
         background: scrolled
-          ? "rgba(255, 255, 255, 0.03)"
+          ? "rgba(5,14,8,0.92)"
           : "transparent",
-        backdropFilter: scrolled ? "blur(20px)" : "none",
         borderBottom: scrolled ? "1px solid rgba(255,255,255,0.07)" : "none",
         boxShadow: scrolled ? "0 10px 40px rgba(0,0,0,0.3)" : "none",
       }}
@@ -116,23 +116,28 @@ export function Header() {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden overflow-hidden"
-            style={{ background: "rgba(5, 14, 8, 0.95)", backdropFilter: "blur(20px)" }}
+            style={{ background: "rgba(5, 14, 8, 0.97)" }}
           >
-            <div className="px-6 py-4 flex flex-col gap-4">
-              {navLinks.map((link) => (
+            <div className="px-6 py-6 flex flex-col">
+              {navLinks.map((link, idx) => (
                 <button
                   key={link.href}
                   onClick={() => handleNav(link.href)}
-                  className="text-white/70 hover:text-[#1FAF5A] transition-colors text-left text-sm"
+                  className="w-full text-left py-3.5 text-white/80 hover:text-[#1FAF5A] transition-colors text-base font-medium flex items-center gap-3"
+                  style={{
+                    borderBottom: idx < navLinks.length - 1 ? "1px solid rgba(255,255,255,0.06)" : "none",
+                  }}
                 >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#1FAF5A] opacity-50 flex-shrink-0" />
                   {link.label}
                 </button>
               ))}
               <button
                 onClick={() => handleNav("#prototypes")}
-                className="mt-2 px-5 py-2.5 rounded-full text-sm text-white text-center"
+                className="mt-5 w-full px-5 py-3 rounded-xl text-white text-sm font-semibold text-center transition-all hover:scale-[1.02]"
                 style={{
                   background: "linear-gradient(135deg, #1FAF5A 0%, #0d7a3e 100%)",
+                  boxShadow: "0 0 20px rgba(31,175,90,0.3)",
                 }}
               >
                 {t("header.cta_prototypes")}

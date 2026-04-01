@@ -1,5 +1,6 @@
-import { Leaf, Mail, Twitter, Linkedin, Github, ArrowUpRight } from "lucide-react";
+import {  Mail, Twitter, Linkedin, Github, ArrowUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import logo from "../../assets/images/logo.png";
 
 export function Footer() {
   const { t } = useTranslation();
@@ -31,21 +32,21 @@ export function Footer() {
           {/* Brand */}
           <div>
             <button onClick={scrollTop} className="flex items-center gap-2 mb-5">
-              <div
+              {/* <div
                 className="w-9 h-9 rounded-xl flex items-center justify-center"
                 style={{
                   background: "linear-gradient(135deg, #1FAF5A 0%, #0d7a3e 100%)",
                   boxShadow: "0 0 20px rgba(31,175,90,0.3)",
                 }}
               >
-                <Leaf className="w-5 h-5 text-white" />
-              </div>
-              <span
+              </div> */}
+                       <img src={logo} alt="EKOLO Logo" className="h-16 w-auto object-contain" />
+              {/* <span
                 className="text-white"
                 style={{ fontWeight: 700, fontSize: "1.1rem", letterSpacing: "0.1em" }}
               >
                 EKOLO
-              </span>
+              </span> */}
             </button>
             <p className="text-white/35 text-sm mb-6" style={{ lineHeight: 1.7 }}>
               {t("footer.description")}

@@ -55,7 +55,7 @@ export function Header() {
           onClick={() => handleNav("#accueil")}
           className="flex items-center group cursor-pointer"
         >
-          <img src={logo} alt="EKOLO Logo" className="h-16 w-auto object-contain" />
+          <img src={logo} alt="EKOLO Logo" className="h-10 w-auto object-contain" />
         </button>
 
         {/* Desktop Nav */}

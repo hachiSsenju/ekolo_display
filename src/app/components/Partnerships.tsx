@@ -4,6 +4,8 @@ import { Building2, Heart, Factory, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import adapmeLogo from "../../assets/images/adapme.png";
 import gerexatlas from "../../assets/images/gerexatlas.png";
+import govathonLogo from "../../assets/images/govathon.png";
+import ministerePublique from "../../assets/images/fonction_publique.png";
 
 /* ─── Partner logos for the carousel ─── */
 interface Partner {
@@ -18,6 +20,8 @@ interface Partner {
 const PARTNERS: Partner[] = [
   { name: "ADAPME", logo: adapmeLogo, type: "image", url: "https://samapme.adepme.sn" },
   { name: "GEREX ATLAS", logo: gerexatlas, type: "image", url: "https://gerexatlas.com" },
+  { name: "Govathon", logo: govathonLogo, type: "image", url: "https://govathon.sn" },
+  { name: "Ministère de la fonction publique", logo: ministerePublique, type: "image", url: "https://fonctionpublique.gouv.sn" },
   // { name: "Institutions Gouvernementales", icon: Building2, color: "#1FAF5A", type: "icon", url: "#" },
   // { name: "ONG & Associations", icon: Heart, color: "#f7c59f", type: "icon", url: "#" },
   // { name: "Industriels", icon: Factory, color: "#a78bfa", type: "icon", url: "#" },
